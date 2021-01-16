@@ -28,7 +28,7 @@ window.addEventListener('load', () => {
         bubble.style.backgroundColor = colors[index];
         bubble.style.animation = 'jump 1s ease';
     };
-    bubble.addEventListener('animationend', function() {
+    bubble.addEventListener('animationsend', function() {
         visual.removeChild(this);
 
     });
