@@ -30,6 +30,7 @@ window.addEventListener('load', () => {
     };
     bubble.addEventListener('animationsend', function() {
         visual.removeChild(this);
+        //comment here
 
     });
 });
