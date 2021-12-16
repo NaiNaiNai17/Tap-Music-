@@ -11,26 +11,42 @@ window.addEventListener('load', () => {
         '#60c2d3',
     ];
 
-    //lets add sound
-    console.log(audio[0]);
+    const keyNote = [65,66,67,68,69,70]
+
+    const keys = document.querySelectorAll('.key')
+    
+  
+
     pads.forEach((pad, index) => {
-        pad.addEventListener('click', function() {
+        pad.addEventListener('click', () => {
             audio[index].currentTime = 0;
             audio[index].play();
-
             createBubbles(index);
         });
+       
     });
-    /// create a function that makes bubbles
+
+
+    
+        document.addEventListener('keydown', (e) => {
+            pads.forEach((pad, index) => {
+            if (e.keyCode === keyNote[index]){
+            audio[index].currentTime = 0;
+            audio[index].play();
+            createBubbles(index);
+            }
+           
+        
+        }); 
+        });
+        
+   
     const createBubbles = (index) => {
         const bubble = document.createElement('div');
         visual.appendChild(bubble);
         bubble.style.backgroundColor = colors[index];
         bubble.style.animation = 'jump 1s ease';
+    
     };
-    bubble.addEventListener('animationsend', function() {
-        visual.removeChild(this);
-        //comment here
-
-    });
+    
 });

@@ -6,6 +6,7 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
+    text-shadow: #775671 1px 2px 1px;
 }
 
 .app {
@@ -20,6 +21,7 @@ header h1 {
     margin: 50px 0px 30px 0px;
     text-align: center;
     font-size: 40px;
+    
 }
 
 header p {
@@ -62,6 +64,15 @@ header p {
     background-color: #feeafa;
 }
 
+p{
+display: flex;
+justify-content: center;
+align-items: center;
+margin-top: 10%;
+font-size: 1.5rem;
+text-shadow: #775671 1px 2px 1px;
+
+}
 @keyframes jump {
     0% {
         bottom: 0%;
